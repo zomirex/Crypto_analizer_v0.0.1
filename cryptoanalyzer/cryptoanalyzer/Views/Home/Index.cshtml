@@ -1,0 +1,27 @@
+﻿@model List<Cucrypto>
+<h1>welcome to my home : Current Crypto price :)</h1>
+<h2>Date:@Model[0].DateRetrieved</h2>
+<div style="display:flex;align-content:center;margin-left:20px" ;>
+    <div style="margin-right:20px">
+        @foreach (var item in Model)
+        {
+            
+            <div style="background-color:aqua;display:flex;align-content:center ; padding:20px; border-radius:10px;margin-bottom:20px;">
+                <h4 style="margin-right:10px;">Crypto name :@item.Name </h4>
+                <h5 style="margin-right:10px;">@item.Symbol </h5>
+                <p>Current price: @item.Price  in @item.DateRetrieved</p>
+            </div>
+        }
+    </div>
+    <div>
+        @foreach (var item in Model)
+        {
+            <div style="background-color:forestgreen;display:flex;align-content:center ; padding:20px; border-radius:10px;margin-bottom:20px;">
+                <h4 style="margin-right:10px;">Crypto name :@item.Name </h4>
+                <h5 style="margin-right:10px;">@item.Symbol </h5>
+                <p>Future price :@item.Price</p>
+            </div>
+        }
+    </div>
+</div>
+
